@@ -11,7 +11,7 @@ output_layer = [layer_names[i[0] -1] for i in yolo.getUnconnectedOutLayers()]
 color_red = (0, 0, 255)
 color_green = (0, 255, 0)
  
-name = "img3.jpg"
+name = "img.jpg"
 img = cv2.imread(name)
 height, width, channel =  img.shape
 
@@ -49,6 +49,6 @@ for i in range(len(boxes)):
         cv2.putText(img, label,(x,y+10),cv2.FONT_HERSHEY_PLAIN,8,color_red,8)  
 
 cv2.imshow("image",img)
-cv2.imwrite("output2.jpg",img)
+cv2.imwrite("output.jpg",img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
